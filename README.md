@@ -1,5 +1,5 @@
 Fundamentos de programacion
-
+Semana 1
 En esta carpeta se encuentran los ejercicios de la semana 1, en la carpeta con el nombre de "semana1.ipynb" se encuentra la Calculadora De Tiempo Digital y los ejercicios evaluables extras.
 
   °Actividad 1.
@@ -14,4 +14,15 @@ EN LA CARPETA DOS SE ENCUENTRAN TODOS LOS ARCHIVOS CORRESPONDIENTES A ESTA SEMAN
   °Archivo:EjerciciosNE.ipynb, corresponde a algunos ejercicios de extras para desarrollar habilidades o comprender mejor el tema.
 
 Hasta aqui lo elaborado pora la semana 2.
+
+SEMANA 3.
+En esta carpeta se encuentran los archivos del avance del proyecto y los ejercicios extras de la semana.
+
+°Carpeta: Avancedelproyecto
+  Se encuentran los archivos pertenecientes al avence del proyecto.
+    °Archivo: proyecto.py, contiene un avance del codigo del proyecto con una idea principal.
+    °Archivo: En PDF donde se esplica la problematica del proyecto asi como la solucion.
+    °Archivo de diagrama de flujo y pseudocodigo en Pseint.
+°Archivo: EjerciciosNE.ipynb pertenece a los ejercicios estras realizados a lo largo de la semana.
+
   
