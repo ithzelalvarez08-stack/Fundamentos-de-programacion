@@ -25,4 +25,12 @@ En esta carpeta se encuentran los archivos del avance del proyecto y los ejercic
     °Archivo de diagrama de flujo y pseudocodigo en Pseint.
 °Archivo: EjerciciosNE.ipynb pertenece a los ejercicios estras realizados a lo largo de la semana.
 
+
+SEMANA 4.
+EN LA CARPETA DOS SE ENCUENTRAN TODOS LOS ARCHIVOS CORRESPONDIENTES A ESTA SEMANA, corresponden a programas con los comandos "for" y "while".
+
+  °Archivo: tablapitagoras.py, corresponde a la actividad 3 donde se desarrollo el pograma para desarrollar una tabla de pitagoras con los comandos "def" y "for", asi como se implemento una matriz.
+  °Archivo:Ejercicios_extras_evaluables.ipynb, corresponde a los 4 ejercicios extras evaluables correspondientes a esta semana.
+  °Archivo:EjerciciosNE.ipynb, corresponde a algunos ejercicios de extras para desarrollar habilidades o comprender mejor el tema.
+
   
