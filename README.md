@@ -33,4 +33,5 @@ EN LA CARPETA DOS SE ENCUENTRAN TODOS LOS ARCHIVOS CORRESPONDIENTES A ESTA SEMAN
   °Archivo:Ejercicios_extras_evaluables.ipynb, corresponde a los 4 ejercicios extras evaluables correspondientes a esta semana.
   °Archivo:EjerciciosNE.ipynb, corresponde a algunos ejercicios de extras para desarrollar habilidades o comprender mejor el tema.
 
-  
+  AVISOO..
+  Hola profe, solo para mensionarle que para realizar los programas de esta semana mi compañero Jorge Leonardo y yo nos ayudamos para realizarlos, por si nuestros codigos tienen algun parecido o similitudes.
