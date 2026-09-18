@@ -43,3 +43,7 @@ EN LA CARPETA SE ENCUENTRAN TODOS LOS ARCHIVOS CORRESPONDIENTES A ESTA SEMANA, c
   °Archivo: menu_modular.py, corresponde a la actividad 4 donde se desarrollo el pograma mostrar diferentes funciones dentro de un mismo codigo como agregar algun elemento a una tupla y realizar un diccionario.
   °Archivo:Ejercicios_extras_evaluables.ipynb, corresponde a los 4 ejercicios extras evaluables correspondientes a esta semana y los ejercicios de castigo de esta semana se encuentran todos es este mismo archivo.
   °Archivo:EjerciciosNE.ipynb, corresponde a algunos ejercicios de extras para desarrollar habilidades o comprender mejor el tema.
+
+  SEMANA 6.
+Por esta semana, se encuentran las capturas de la finalizacion del certificado de Cisco Networking Academy.
+ °Archivo: 25 ejercicios.ipynb, corresponde a loe 25 ejercicios de castigo de la semana 6.
