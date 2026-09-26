@@ -1,0 +1,6 @@
+ARCHIVO DE PRUEBA DEL RESTAURANTE LAS FLORES
+Archivo creado para la Actividad 7.
+========================================
+
+Fecha de modificación: (12, 2, 2026)
+Hasta aui las ventas del dia

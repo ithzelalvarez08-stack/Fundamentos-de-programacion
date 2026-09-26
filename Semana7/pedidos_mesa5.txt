@@ -1,0 +1,27 @@
+ARCHIVO DE PRUEBA DEL RESTAURANTE LAS FLORES
+Archivo creado para la Actividad 7.
+========================================
+
+REGISTRO DE PEDIDO - RESTAURANTE LAS FLORES
+Fecha (día, mes, año): (12, 2, 2026)
+Mesa: 5
+Personas: 2
+Modalidad de pago: Cuentas separadas (2.5% por persona)
+
+Persona 1
+Ensalada Cesar | Precio: $100.00 | Cantidad: 1 | Importe: $100.00
+Enchiladas Verdes | Precio: $100.00 | Cantidad: 1 | Importe: $100.00
+Subtotal individual: $200.00
+Propina individual: $5.00
+Total individual: $205.00
+
+Persona 2
+Enchiladas Rojas | Precio: $150.00 | Cantidad: 1 | Importe: $150.00
+Subtotal individual: $150.00
+Propina individual: $3.75
+Total individual: $153.75
+
+Subtotal de la mesa: $350.00
+Propina total: $8.75
+Total de la mesa: $358.75
+---------------------------------------------

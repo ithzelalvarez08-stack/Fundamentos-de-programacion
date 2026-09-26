@@ -47,3 +47,12 @@ EN LA CARPETA SE ENCUENTRAN TODOS LOS ARCHIVOS CORRESPONDIENTES A ESTA SEMANA, c
   SEMANA 6.
 Por esta semana, se encuentran las capturas de la finalizacion del certificado de Cisco Networking Academy.
  °Archivo: 25 ejercicios.ipynb, corresponde a loe 25 ejercicios de castigo de la semana 6.
+
+SEMANA 7.
+Para esta semana se realizoron las modificaciones del documento y la terminacion del codigo para el proyecto del restaurante, el programa se basa en la toma de pedidos por mesa y realiza la cuenta por persona y mesa junto con la propina, tambien cuenta con:
+
+  ° Control de inactividad.
+  ° Lectura de archivos.
+  ° Escritura de archivo.
+  ° Uso de excepciones.
+  ° Depuracion de PDB.
