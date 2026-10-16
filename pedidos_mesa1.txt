@@ -1,2 +1,26 @@
 ARCHIVO DE PEDIDOS - RESTAURANTE LAS FLORES
 =============================================
+
+REGISTRO DE PEDIDO - RESTAURANTE LAS FLORES
+Fecha (día, mes, año): (12, 9, 2026)
+Mesa: 1
+Personas: 2
+Modalidad de pago: Cuenta por mesa (5%)
+
+Persona 1
+Ensalada Cesar | Precio: $100.00 | Cantidad: 2 | Importe: $200.00
+Subtotal individual: $200.00
+Propina individual: $11.25
+Total individual: $211.25
+
+Persona 2
+Pasta | Precio: $100.00 | Cantidad: 1 | Importe: $100.00
+Helado napolitano | Precio: $150.00 | Cantidad: 1 | Importe: $150.00
+Subtotal individual: $250.00
+Propina individual: $11.25
+Total individual: $261.25
+
+Subtotal de la mesa: $450.00
+Propina total: $22.50
+Total de la mesa: $472.50
+---------------------------------------------

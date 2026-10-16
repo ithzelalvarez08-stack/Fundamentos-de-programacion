@@ -5,6 +5,8 @@
 import os
 import time
 import pdb
+import threading
+import queue
 #Variable de depuracion.
 MODO_DEBUG = False
 
@@ -46,23 +48,63 @@ def pantalla():
         time.sleep(1)
     print("Sistema listo.")
 
-
 def capturar_fecha():
-    """Devuelve la fecha en la tupla requerida: Fecha = dia, mes, anio."""
     while True:
         try:
-            dia = int(input("Ingrese el día: "))
-            mes = int(input("Ingrese el mes: "))
-            anio = int(input("Ingrese el año: "))
+            dia = int(
+                input_con_inactividad("Ingrese el día: ")
+            )
 
-            # Validar que el día exista en el mes y año indicados.
+            mes = int(
+                input_con_inactividad("Ingrese el mes: ")
+            )
+
+            # Capturar el año como texto para validar sus dígitos.
+            anio_texto = input_con_inactividad(
+                "Ingrese el año (4 dígitos): "
+            ).strip()
+
+            # Validar que el año tenga exactamente 4 dígitos.
+            if len(anio_texto) != 4 or not anio_texto.isdigit():
+                print(
+                    "Año no válido. "
+                    "Debe ingresar exactamente 4 dígitos."
+                )
+                continue
+
+            anio = int(anio_texto)
             import datetime
+            # Validar que la fecha exista.
             datetime.date(anio, mes, dia)
 
             Fecha = dia, mes, anio
             return Fecha
-        except ValueError:
-            print("Fecha no válida. Verifique día, mes y año.")
+
+        except (ValueError, OverflowError):
+            print(
+                "Fecha no válida. "
+                "Verifique día, mes y año."
+            )
+tiempo_inactividad = 10 * 60
+
+def input_con_inactividad(mensaje):
+    respuestas = queue.Queue()
+
+    def leer_entrada():
+        try:
+            respuestas.put((True, input(mensaje)))
+        except Exception as error:
+            respuestas.put((False, error))
+    hilo = threading.Thread(target=leer_entrada,daemon=True)
+    hilo.start()
+
+    try:
+        correcto, resultado = respuestas.get(timeout = tiempo_inactividad)
+    except queue.Empty:
+        raise TimeoutError("El sistema se cerró por 10 minutos de inactividad.")
+    if correcto:
+        return resultado
+    raise resultado
 
 #Verifica que los archivos .txt de las mesas exixtan y que si no exixten los cree.
 def preparar_archivos():
@@ -76,7 +118,48 @@ def preparar_archivos():
             print(f"No hay permisos para crear {nombre}.")
         except OSError as error:
             print(f"No se pudo preparar {nombre}: {error}")
+def borrar_archivo():
+    print("\n========== BORRAR INFORMACIÓN ==========")
 
+    for numero, nombre in enumerate(archivos_prueba, 1):
+        print(f"{numero}. {nombre}")
+
+    opcion = pedir_entero(
+        "Seleccione el archivo que desea limpiar (1 al 5): ",
+        1, 5
+    )
+
+    nombre_archivo = archivos_prueba[opcion - 1]
+
+    confirmacion = input_con_inactividad(
+        f"¿Está seguro de borrar toda la información de "
+        f"{nombre_archivo}? (si/no): "
+    ).strip().lower()
+
+    if confirmacion == "si":
+        try:
+            with open(
+                nombre_archivo, "w", encoding="utf-8"
+            ) as archivo:
+                archivo.write(
+                    "ARCHIVO DE PEDIDOS - "
+                    "RESTAURANTE LAS FLORES\n"
+                )
+                archivo.write("=" * 45 + "\n")
+
+            print("La información se borró correctamente.")
+
+        except FileNotFoundError:
+            print("No se encontró el archivo.")
+
+        except PermissionError:
+            print("No hay permisos para borrar la información.")
+
+        except OSError as error:
+            print(f"Error al limpiar el archivo: {error}")
+
+    else:
+        print("Operación cancelada.")
 
 def mostrar_menu():
     print("\n========== MENÚ ==========")
@@ -312,7 +395,8 @@ def menu_principal(Fecha):
         [2, "Leer archivo de pedidos"],
         [3, "Anexar información a un archivo"],
         [4, "Preparar archivos de prueba"],
-        [5, "Salir"]
+        [5, "Borrar informacion de los archivos"],
+        [6, "Salir"]
     ]
 
     while True:
@@ -320,7 +404,7 @@ def menu_principal(Fecha):
         for opcion in opciones:
             print(f"{opcion[0]}. {opcion[1]}")
 
-        seleccion = pedir_entero("Seleccione una opción: ", 1, 5)
+        seleccion = pedir_entero("Seleccione una opción: ", 1, 6)
 
         if seleccion == 1:
             registro_pedido(Fecha)
@@ -332,6 +416,10 @@ def menu_principal(Fecha):
             preparar_archivos()
             print("Archivos preparados correctamente.")
         elif seleccion == 5:
+            borrar_archivo()
+            print("Informacion borrada correctamente.")
+                       
+        elif seleccion == 6:
             print("Gracias por utilizar el sistema.")
             break
 
